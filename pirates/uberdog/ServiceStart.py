@@ -1,7 +1,7 @@
 from panda3d.core import *
 from direct.showbase import PythonUtil
 import traceback
-import __builtin__
+import builtins
 import os
 import argparse
 
@@ -16,12 +16,13 @@ args = parser.parse_args()
 
 for prc in args.config:
     if not os.path.exists(prc):
-        print ':ServiceStart(warning): Failed to locate prc %s!' % prc
+        print(':ServiceStart(warning): Failed to locate prc %s!' % prc)
         continue
     loadPrcFile(prc)
+    print("loaded: " + prc)
 
-if os.path.exists('config/personal.prc'):
-    loadPrcFile('config/personal.prc')
+if os.path.exists('config/general.prc'):
+    loadPrcFile('config/general.prc')
 
 localconfig = ''
 if args.base_channel: localconfig += 'air-base-channel %s\n' % args.base_channel
@@ -35,7 +36,7 @@ class game:
     name = 'uberDog'
     process = 'server'
 
-__builtin__.game = game
+builtins.game = game
 
 from otp.ai.AIBaseGlobal import *
 

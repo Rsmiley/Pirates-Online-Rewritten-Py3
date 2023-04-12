@@ -1,4 +1,4 @@
-from pandac.PandaModules import TransformState, Vec3
+from panda3d.core import TransformState, Vec3
 OCEAN_GRID_SIZE = 60
 OCEAN_CELL_SIZE = 2000
 OCEAN_GRID_RADIUS = 3

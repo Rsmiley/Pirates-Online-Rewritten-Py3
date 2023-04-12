@@ -83,6 +83,7 @@ FleetHolidayConfigs = {
             'escapedMsg': Msgs.EF_EitcEscaped,
             'defeatedMsg': Msgs.EF_EitcDefeated,
             'dates': HolidayDates(HolidayDates.TYPE_CUSTOM, [
+
                 (2010, Month.MARCH, 11, 12, 0, 0), 
                 (2010, Month.MARCH, 11, 13, 45, 0),
                 (2010, Month.MARCH, 11, 15, 0, 0), 

@@ -1,6 +1,49 @@
 import time
-Month = Enum('JANUARY, FEBRUARY, MARCH, APRIL,               MAY, JUNE, JULY, AUGUST, SEPTEMBER,               OCTOBER, NOVEMBER, DECEMBER', 1)
-Day = Enum('MONDAY, TUESDAY, WEDNESDAY, THURSDAY,             FRIDAY, SATURDAY, SUNDAY')
+#from direct.showbase.PythonUtil import Enum
+#Month = Enum('JANUARY, FEBRUARY, MARCH, APRIL,               MAY, JUNE, JULY, AUGUST, SEPTEMBER,               OCTOBER, NOVEMBER, DECEMBER', 1)
+
+class Month():
+    def JANUARY():
+        return 1
+    def FEBRUARY():
+        return 2
+    def MARCH():
+        return 3
+    def APRIL():
+        return 4
+    def MAY():
+        return 5
+    def JUNE():
+        return 6
+    def JULY():
+        return 7
+    def AUGUST():
+        return 8
+    def SEPTEMBER():
+        return 9
+    def OCTOBER():
+        return 10
+    def NOVEMBER():
+        return 11
+    def DECEMBER():
+        return 12
+class Day():
+    def MONDAY():
+        return 0
+    def TUESDAY():
+        return 1
+    def WEDNESDAY():
+        return 2
+    def THURSDAY():
+        return 3
+    def FRIDAY():
+        return 4
+    def SATURDAY():
+        return 5
+    def SUNDAY():
+        return 6
+
+#Day = Enum('MONDAY, TUESDAY, WEDNESDAY, THURSDAY,             FRIDAY, SATURDAY, SUNDAY')
 
 class HolidayDates():
     TYPE_START = 0
@@ -42,6 +85,8 @@ class HolidayDates():
         return date
 
     def getTime(self, t, date=None):
+        return False
+    """
         if not date:
             date = self.getCurrentDate()
         if self.dateType == HolidayDates.TYPE_CUSTOM:
@@ -58,8 +103,11 @@ class HolidayDates():
             return time.mktime((date[0], date[1], day, t[1], t[2], t[3], 0, 0, -1))
         if self.dateType == HolidayDates.TYPE_DAILY:
             return time.mktime((date[0], date[1], date[2], t[0], t[1], t[2], 0, 0, -1))
+            """
 
     def getAdjustedTime(self, t, date=None):
+        return False
+"""
         if not date:
             date = self.getCurrentDate()
         if self.dateType == HolidayDates.TYPE_CUSTOM:
@@ -76,3 +124,4 @@ class HolidayDates():
             return time.mktime((date[0], date[1], day + 7, t[1], t[2], t[3], 0, 0, -1))
         if self.dateType == HolidayDates.TYPE_DAILY:
             return time.mktime((date[0], date[1], date[2] + 1, t[0], t[1], t[2], 0, 0, -1))
+            """

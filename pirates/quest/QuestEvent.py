@@ -172,7 +172,7 @@ class BossBattleCompleted(QuestEvent):
         if hasattr(taskDNA, 'handleBossBattleCompleted'):
             return taskDNA.handleBossBattleCompleted(self, taskState)
         else:
-            print 'BossBattleCompleted. Warnning taskDNA %s does not have method handleBossBattleCompleted' % taskDNA
+            print('BossBattleCompleted. Warnning taskDNA %s does not have method handleBossBattleCompleted' % taskDNA)
             return False
 
 

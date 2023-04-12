@@ -17,5 +17,5 @@ class QuestHolderBase():
         del self._rewardCollectors[cId]
 
     def _trackRewards(self, trade):
-        for collector in self._rewardCollectors.itervalues():
+        for collector in self._rewardCollectors.values():
             collector.collect(trade)
